@@ -19,7 +19,37 @@ These are my notes for [**_Programming for Everybody (Getting Started With Pytho
 
 <br> [1.3 Python as a Language]
 1. Syntax Error: Python is lost.
-2. 
+
+
+* **_Week 2_**
+
+<br> [2.1 ]
+
+
+* **_Week 3_**
+
+<br> [3.1 ]
+
+
+* **_Week 4_**
+
+<br> [4.1 ]
+
+
+* **_Week 5_
+
+<br> [5.1 ]
+
+
+* **_Week 6_**
+
+<br> [6.1 ]
+
+
+* **_Week 7_**
+
+<br> [7.1 ]
+
 
 ## For GitHub
 [语法](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
