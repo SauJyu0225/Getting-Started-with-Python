@@ -18,6 +18,8 @@ These are my notes for [**_Programming for Everybody (Getting Started With Pytho
 <br> (5) **Secondary Memory**: **Slower large permanent storage** - lasts untill deleted - disk drive/memory stick
 
 <br> [1.3 Python as a Language]
+1. Syntax Error: Python is lost.
+2. 
 
 ## For GitHub
 [语法](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
