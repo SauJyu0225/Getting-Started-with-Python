@@ -36,7 +36,7 @@ These are my notes for [**_Programming for Everybody (Getting Started With Pytho
 <br> [4.1 ]
 
 
-* **_Week 5_
+* **_Week 5_**
 
 <br> [5.1 ]
 
