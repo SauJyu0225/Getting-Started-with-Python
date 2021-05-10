@@ -46,7 +46,8 @@ print('hello from a file')
 Step 4 Open Terminal (for Mac) aand write code:
 <br> cd ~/Desktop/py4e
 <br> python HelloWorld.py
-<br> ! [alt text](Getting-Started-with-Python/image/terminal.png)
+<br> ! [alt text](https://github.com/SauJyu0225/Getting-Started-with-Python/blob/main/image/terminal.png)
+
 
 
 
