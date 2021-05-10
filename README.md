@@ -48,7 +48,7 @@ not been recorded
    ```python
    print('hello from a file')
    ```
-   **Step 4:** Open Terminal (for Mac) aand write code:
+   **Step 4:** Open Terminal (for Mac) and write code:
    ```
    cd ~/Desktop/py4e
    python HelloWorld.py
@@ -352,16 +352,15 @@ You cannot use **reserved words** as variable names/identifiers.
 
 1. Numeric Expressions
 
-```
-|  Operator |     Operation     |
-| ----------|:-----------------:|
-|     +     |      Addition     |
-|     -     |    Subtraction    |
-|     *     |   Multiplication  |
-|     /     |      Division     |
-|     **    |        Power      |
-|     %     |      Remainder    |
-```
+   | Operator  | Operation         |
+   | --------- |:-----------------:|
+   | +         |      Addition     | 
+   | -         |    Subtraction    |
+   | *         |   Multiplication  |
+   | /         |      Division     |
+   | **        |        Power      |
+   | %         |      Remainder    |
+
 
 2. Order of Evaluation
 
@@ -546,7 +545,7 @@ You cannot use **reserved words** as variable names/identifiers.
 
 10. User input
 
-   We can instruct Python to pause and read data from the user using the **input()** function
+We can instruct Python to pause and read data from the user using the **input()** function
 
    The **input()** function returns a string
 
