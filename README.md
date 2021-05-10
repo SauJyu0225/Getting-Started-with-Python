@@ -350,10 +350,226 @@ You cannot use **reserved words** as variable names/identifiers.
 
 #### **2.2 Expressions - Part 2**
 
-1. 
+1. Numeric Expressions
 
+```
+|  Operator |     Operation     |
+| ----------|:-----------------:|
+|     +     |      Addition     |
+|     -     |    Subtraction    |
+|     *     |   Multiplication  |
+|     /     |      Division     |
+|     **    |        Power      |
+|     %     |      Remainder    |
+```
+
+2. Order of Evaluation
+
+   When we string operators together - Python must know which one to do first
+
+   This is called **"operator precedence"**
+
+   Which operator "take precedence" over the others?
+
+   ```
+   x = 1 + 2 * 3 - 4 / 5 ** 6
+   ```
+
+3. Operator Precedence Rules
+
+   **_Highest precedence rule to lowest precedence rule_**
+
+   - Parentheses are always respected
+   - Exponentiation (raise to a power)
+   - Multiplication, Division, and Remainder
+   - Addition and Subtraction
+   - Left to right
+
+   ```python
+   x = 1 + 2 ** 3 / 4 * 5
+   print (x)
+   
+   x = 1 + 2^3 / 4 * 5
+   x = 1 + 8 / 4 * 5
+   x = 1 + 2 * 5
+   x = 1 + 10
+   x = 11
+   ```
+
+   Remeber the rules top to down (Parenthesis; Power; Multiplication; Addition; Left to right)
+
+   When writing code - use parenthses
+
+   When writing coed - keep mathematical expressions simple enought that they are easy to understand
+
+   Break long series of mathematical perations up to make them more clear
+
+
+4. What dose "Type" mean?
+
+   In a Python variables, literals, and constants have a **"type"**
+
+   Python knows the **difference** between an integer number and a string
+
+   For example **"+"** means "addition" if something is a number and "concentrate" if something is a string
+
+   Concentrate = put together
+
+   ```python
+   ddd = 1 + 4
+   print(ddd)
+   5
+
+   eee = 'hello ' + 'there'
+   print(eee)
+   hello there
+
+5. Type Matters
+
+   Python knows what **"type"** everything is
+
+   Some operations are prohibited
+
+   **You cannot "add 1" to a string**
+
+   We can ask Python what type something is by using the **type()** function
+
+   ```python
+   eee = 'hello ' + 'there'
+   eee = eee + 1
+   Traceback (most recent call last):
+   File "<stdin>", line 1, in <module>
+   TypeError: Can't covert 'int' object to str implicitly
+
+   type(eee)
+   <class'str'>
+
+   type('hello')
+   <class'str'>
+
+   type(1)
+   <class'int'>
+
+6. Several types of numbers
+
+   Numbers have two main types:
+
+   - **Integers** are whole numbers: -14, -2, 0, 1, 100, 401233
+   - **Floating point numbers** have decimal parts: -2.5, 0.0, 98.6, 14.0
+
+   There are other number types - they are variations on float and integer
+
+   ```python
+   xx =1
+   type(xx)
+   <class 'int'>
+
+   temp = 98.6
+   type(temp)
+   <class'float'>
+
+   type(1)
+   <class 'int'>
+
+   type(1.0)
+   <class'float'>
+   ```
+
+7. Type conversions
+   
+   When you put an integer and floating point in an expression, the integer is **implicitly** converted to a float
+
+   You can control this with the built-in functions int() and float()
+
+   ```python
+   print(float(99) + 100)
+   199.0
+
+   i=42
+   type(1)
+   <class'int'>
+   f = float(i)
+   print(f)
+   42.0
+   type(f)
+   <class'float'>
+   ```
+
+8. Integer Division
+
+   Interger division produces a floating point result
+
+   **Integer division was different in Python 2.x**
+
+   ```python
+   print(10 / 2)
+   5.0
+
+   print(9 / 2)
+   4.5
+
+   print(99 / 100)
+   0.99
+
+   print(10.0 / 2.0)
+   5.0
+
+   print(99.0 / 100.0)
+   0.99
+   ```
+
+9. String conversions
+
+   You can also use **int()** and **float()** to convert between strings and intergers
+
+   You will get **error** if the string does not contain numeric characters
+
+   ```python
+   sval = '123'
+   type(sval)
+   <class 'str'>
+   print (sval + 1)
+   Traceback (most recent call last):
+   File "<stdin>", line 1, in <module>
+   TypeError: Can't convert 'int' object to str implicitly
+   ival = int(sval)
+   type(ival)
+   <class 'int'>
+   print(ival + 1)
+   124
+   nsv = 'hello bob'
+   niv = int(nsv)
+   Traceback (most recent call last):
+   File "<stdin>", line 1, in <module>
+   ValueError: invalid literal for int() with bas 10: 'x'
+   ```
+
+10. User input
+
+   We can instruct Python to pause and read data from the user using the **input()** function
+
+   The **input()** function returns a string
+
+   ```python
+   nam = input('Who are you?')
+   print('welcome', nam)
+
+   Who are you
+   Chunk (Press Enter)
+   Welcome Chunk
+   ```
 
 #### **2.3 Expressions - Part 3**
+
+1. Comments in Python
+
+   Anything after a **#** is ignored by Python
+
+   Why Comment?
+   - Describe what is going to happen in a sequence of code
+   - Document who wrote the code or other ancillary information
+   - Turn off a line of code - perhaps temporarily
+
 
 ---
 
