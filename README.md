@@ -31,6 +31,7 @@ print('Play!')
 print('Hello World.')
 ```
 2. Installing Python and writing a program:
+
 Step 1 Install **Python3** and **Visual Studio Code**
 
 Step 2 
@@ -44,9 +45,10 @@ Step 3 Write the code in Visual Studio Code:
 print('hello from a file')
 ```
 Step 4 Open Terminal (for Mac) aand write code:
-<br> cd ~/Desktop/py4e
-<br> python HelloWorld.py
-<br> ![alt text](https://github.com/SauJyu0225/Getting-Started-with-Python/blob/main/image/terminal.png)
+  ```
+cd ~/Desktop/py4e
+python HelloWorld.py
+```
 
 
 
