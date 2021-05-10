@@ -23,7 +23,7 @@ These are my notes for [**_Programming for Everybody (Getting Started With Pytho
 
 * **_Week 2_**
 
-<br> [2.1 Demonstration: Using the Python Playground]
+<br> [Demonstration: Using the Python Playground]
 
 1.
 ```python
@@ -49,6 +49,12 @@ Step 4 Open Terminal (for Mac) aand write code:
 cd ~/Desktop/py4e
 python HelloWorld.py
 ```
+<br> [1.4 Writing paragraphs of code]
+1. Elements of Python
+<br> (1) Vocabulary/Words: Variables and Reserved words
+<br> (2) Sentence structure: valid syntax patterns
+<br> (3) Story structure: constructing a prigram for a purpose
+
 
 
 
@@ -56,27 +62,26 @@ python HelloWorld.py
 
 * **_Week 3_**
 
-<br> [3.1 ]
+
 
 
 * **_Week 4_**
 
-<br> [4.1 ]
+
 
 
 * **_Week 5_**
 
-<br> [5.1 ]
+
 
 
 * **_Week 6_**
 
-<br> [6.1 ]
 
 
 * **_Week 7_**
 
-<br> [7.1 ]
+
 
 
 ## For GitHub
