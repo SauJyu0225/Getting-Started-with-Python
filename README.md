@@ -14,11 +14,12 @@ not been recorded
 1. When you write a program, you create a file on the secondary memory, like a Python file, and then at some point that is loaded into the main memory, translated, and then your program is here. And then when the CPU says what next, your program feeds its first instruction. And then when that's done, the CPU says what's next? It feeds the second instruction, third instruction, fourth instruction. It's called the **fetch-execute cycle**.
 
 2. Definitions  
-(1) **Central Processing Unit (CPU)**: Runs the program - The CPU id always wondering "what to do next". Not the brains exactly - very dumb but very very fast.  
-(2) **Input Devices**: Keyboard, Mouse, Touch Screen  
-(3) **Output Devices**: Screen, Speakers, Printer, DVD Burner  
-(4) **Main Memory**: **Fast small temporary storage** - lost on reboot - aka RAM  
-(5) **Secondary Memory**: **Slower large permanent storage** - lasts untill deleted - disk drive/memory stick  
+
+   (1) **Central Processing Unit (CPU)**: Runs the program - The CPU id always wondering "what to do next". Not the brains exactly - very dumb but very very fast.  
+   (2) **Input Devices**: Keyboard, Mouse, Touch Screen  
+   (3) **Output Devices**: Screen, Speakers, Printer, DVD Burner  
+   (4) **Main Memory**: **Fast small temporary storage** - lost on reboot - aka RAM  
+   (5) **Secondary Memory**: **Slower large permanent storage** - lasts untill deleted - disk drive/memory stick  
 
 #### **1.3 Python as a Language**
 1. Syntax Error: Python is lost.
@@ -61,9 +62,10 @@ not been recorded
 #### **1.4 Writing paragraphs of code**
 
 1. Elements of Python  
-(1) Vocabulary/Words: Variables and Reserved words  
-(2) Sentence structure: valid syntax patterns  
-(3) Story structure: constructing a prigram for a purpose  
+
+   (1) Vocabulary/Words: Variables and Reserved words  
+   (2) Sentence structure: valid syntax patterns  
+   (3) Story structure: constructing a prigram for a purpose  
 
 2. Reserved words  
 You cannot use **reserved words** as variable names/identifiers.
@@ -146,39 +148,40 @@ You cannot use **reserved words** as variable names/identifiers.
    ```
    Loops (repeated steps) have **iteration variables** that change each time through a loop.
 
-10. Summary
-   ```python
-   name = input('Enter file:')
-   handle = open(name)
-   
-   counts = dict()
-   for line in handle:
-       words = line.split()
-       for word in words:
-           counts[word] = counts.get(word,0) + 1
-   bigcount = None
-   bigword = None
-   for word,count in counts.item():
-       if bigcount is None or count > bigcount:
-           bigword = word
-           bigcount = count
+10. Summary  
 
-   print(bigword, bigcount)
-   ```
+    ```python
+    name = input('Enter file:')
+    handle = open(name)
+    
+    counts = dict()
+    for line in handle:
+        words = line.split()
+        for word in words:
+            counts[word] = counts.get(word,0) + 1
+    bigcount = None
+    bigword = None
+    for word,count in counts.item():
+        if bigcount is None or count > bigcount:
+            bigword = word
+            bigcount = count
+    
+    print(bigword, bigcount)
+    ```
 
 ---
 ### **_Quiz: Chapter 1_** 
 
-1. When Python is running in the interactive mode and displaying the chervron prompt(>>>) - what question is Python asking you?
+1. When Python is running in the interactive mode and displaying the chervron prompt(>>>) - what question is Python asking you?  
 
-   a. What Python statement would you like me to run?
-   b. What is the next machine language instruction to me?
-   c. What is your favourite color?
-   d. What Python script would you like me to run?
+   a. What Python statement would you like me to run?  
+   b. What is the next machine language instruction to me?  
+   c. What is your favourite color?  
+   d. What Python script would you like me to run?  
     
-    Answer: a.
+   Answer: a.
 
-2. What will the following program print out:
+2. What will the following program print out:  
 
    ```python
    x = 15
@@ -186,83 +189,86 @@ You cannot use **reserved words** as variable names/identifiers.
    print (x)
 
    ```
-    a. 20
-    b. 5
-    c. 15
-    d. "print x"
-    e. x + 5
+    a. 20  
+    b. 5  
+    c. 15  
+    d. "print x"  
+    e. x + 5  
 
-    Answer: a.
+    Answer: a.  
 
-3. Python scripts (files) have names that end with:
-    a. .doc
-    b. .py
-    c. .exe
-    d. .png
+3. Python scripts (files) have names that end with:  
 
-    Answer: b.
+    a. .doc  
+    b. .py  
+    c. .exe  
+    d. .png  
 
-4. Which of these words are reserved words in Python?
-    a. make
-    b. break
-    c. todo
-    d. if
-    e. concat
+    Answer: b.  
 
-    Answer: b. d.
+4. Which of these words are reserved words in Python?  
+    
+    a. make  
+    b. break  
+    c. todo  
+    d. if  
+    e. concat  
 
-5. What is the proper way to say "good-bye" to Python?
-    a. #EXIT
-    b. while
-    c. // stop
-    d. quit()
+    Answer: b. d.  
 
-    Answer: d.
+5. What is the proper way to say "good-bye" to Python?  
+    
+    a. #EXIT  
+    b. while  
+    c. // stop  
+    d. quit()  
 
-6. Which of the parts of a computer actually excutes the program instructions?
+    Answer: d.  
 
-    a. Central Processing Units
-    b. Secondary Memory
-    c. Input/Output Devices
-    d. Main Memory
+6. Which of the parts of a computer actually excutes the program instructions?  
 
-    Answer: a.
+    a. Central Processing Units  
+    b. Secondary Memory  
+    c. Input/Output Devices  
+    d. Main Memory  
 
-7. What is "code" in the context of this course?
+    Answer: a.  
 
-    a. A set of rules that govern the style of programs
-    b. A way to encrypt data during World War II
-    c. A sequence of instructions in a programming language
-    d. A password we use to unlock Python features
+7. What is "code" in the context of this course?  
 
-    Answer: c.
+    a. A set of rules that govern the style of programs  
+    b. A way to encrypt data during World War II  
+    c. A sequence of instructions in a programming language  
+    d. A password we use to unlock Python features  
 
-8. A USB memory stick is an example of whihc of the following components of computer architechture?
+    Answer: c.  
 
-   a. Central Processing Unit
-   b. Main Memory
-   c. Output Device
-   d. Secondary Memoty
+8. A USB memory stick is an example of whihc of the following components of computer architechture?  
 
-   Answer: d.
+   a. Central Processing Unit  
+   b. Main Memory  
+   c. Output Device  
+   d. Secondary Memoty  
 
-9. What is the best way to think about a "Syntax Error" while programming?
+   Answer: d.  
 
-   a. The computer did not understand the statement you entered
-   b. The computer needs to have its software upgraded
-   c. The computer has used GPS to find your location and hates everyone from your town
-   d. The computer is overheating and just wnats you to stop to let it cool down
+9. What is the best way to think about a "Syntax Error" while programming?  
 
-   Answer: a.
+   a. The computer did not understand the statement you entered  
+   b. The computer needs to have its software upgraded  
+   c. The computer has used GPS to find your location and hates everyone from your town  
+   d. The computer is overheating and just wnats you to stop to let it cool down  
 
-10. Which of the following is **not** one of the programming patterns coveres in Chapter 1?
+   Answer: a.  
 
-   a. Sequential Steps
-   b. Random Steps
-   c. Conditional Steps
-   d. Repeated Steps
+10. Which of the following is **not** one of the programming patterns coveres in Chapter 1?  
 
-   Answer: b.
+    a. Sequential Steps  
+    b. Random Steps  
+    c. Conditional Steps  
+    d. Repeated Steps  
+
+    Answer: b.  
 
 ---
 ### **_Week 4_**
@@ -271,10 +277,11 @@ You cannot use **reserved words** as variable names/identifiers.
 
 1. Constant
    
-   **Fixed values** such as numbers, letters, and strings, are called **"constants"** because thier value does not change
+   **Fixed values** such as numbers, letters, and strings, are called **"constants"** because thier value does not change  
 
-   (1) Numeric **constants** are as you expect
-   (2) String **constants** use single quotes(') or double quotes(")
+   (1) Numeric **constants** are as you expect  
+   (2) String **constants** use single quotes(') or double quotes(")  
+   
    ```python
    print(123)
    123
@@ -284,7 +291,7 @@ You cannot use **reserved words** as variable names/identifiers.
    Hello world
    ```
 
-2. Variables
+2. Variables  
    
    A **variable** is a named place in the memory where a programmer can store data and later retrieve the data using the **variable** "name"
 
@@ -545,18 +552,18 @@ You cannot use **reserved words** as variable names/identifiers.
 
 10. User input
 
-We can instruct Python to pause and read data from the user using the **input()** function
+    We can instruct Python to pause and read data from the user using the **input()** function
 
-   The **input()** function returns a string
+    The **input()** function returns a string
 
-   ```python
-   nam = input('Who are you?')
-   print('welcome', nam)
+    ```python
+    nam = input('Who are you?')
+    print('welcome', nam)
 
-   Who are you
-   Chunk (Press Enter)
-   Welcome Chunk
-   ```
+    Who are you
+    Chunk (Press Enter)
+    Welcome Chunk
+    ```
 
 #### **2.3 Expressions - Part 3**
 
