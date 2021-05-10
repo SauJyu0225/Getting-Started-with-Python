@@ -23,7 +23,29 @@ These are my notes for [**_Programming for Everybody (Getting Started With Pytho
 
 * **_Week 2_**
 
-<br> [2.1 ]
+<br> [2.1 Demonstration: Using the Python Playground]
+
+1.
+```python
+print('Play!')
+print('Hello World.')
+```
+2. Installing Python and writing a program:
+Step 1 Install **Python3** and **Visual Studio Code**
+
+Step 2 
+Open **Visual Studio Code**. 
+Create and save a new file on your **desktop**. 
+Also, create a folder on your desktop named **_py4e_**.
+I svae the file as **_HelloWorld.py_**.
+
+Step 3 Write the code in Visual Studio Code:
+```python
+print('hello from a file')
+```
+Step 4 Open Terminal (for Mac) aand write code:
+<br> cd ~/Desktop/py4e
+<br> python HelloWorld.py
 
 
 * **_Week 3_**
