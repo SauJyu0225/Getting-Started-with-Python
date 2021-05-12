@@ -576,6 +576,107 @@ You cannot use **reserved words** as variable names/identifiers.
    - Document who wrote the code or other ancillary information
    - Turn off a line of code - perhaps temporarily
 
+   example:
+   ```python
+   # Get the name of the file and open it
+   name = input('Enter file:')
+   handle = open(name, 'r')
+
+   # Count word frequently
+   counts = dict()
+   for line in handle:
+       words = line.split()
+       for word in words:
+           counts[word] = counts.get(word,0) + 1
+
+   # Find the most common word
+   bigcount = None
+   bigword = None
+   for word,count in counts.items():
+       if bigcount is None or count > bigcount:
+           bigword = word
+           bigcount = count
+
+   # All done
+   print(bigword, bigcount)
+   ```
+
+2. Converting user input
+
+   If we wnat to read a number from the user, we must convert it from a string to a number using a type conversion function   
+
+   Later we will deal with bad input data
+
+   ```python
+   # Convert elevator floors
+   inp = input('Europe floor?)
+   usf = inp(inp) + 1
+   print('us floor', usf)
+
+   Europe floor? ---> 0 (string) (press enter)
+   US floor ---> 1 (press enter)
+   ```
+
+### **_Quiz: Chapter 2_**
+
+1. In the following code,
+   ```python
+   print(98.6)
+   ```
+
+   What is "98.6"?  
+
+   a. A conditional statement  
+   b. A variable  
+   c. An iteration/loop statement  
+   d. A constant  
+
+   Answer: d.
+
+2. What does the following code print out?
+   ```python
+   print("123" + "abc")
+   ```
+
+   a. This a syntax error becasue you cannot add strings  
+   b. 123+abc  
+   c. 123abc  
+   d. hello world
+
+   Answer: c.
+
+3. Which of the following is a bad Python variable name?  
+
+   a. Spam  
+   b. spam23  
+   c. spam.23  
+   d. spam_23  
+
+Answer: c.
+
+4. Which of the following is not a Python reserved word?  
+
+   a. spam  
+   b. break  
+   c. continue  
+   d. for
+
+   Answer: a.
+
+5. Assume the variable x has been intialized to an integer value (e.g., x = 3). What does the following statement do?  
+
+    ```python
+    x = x + 2
+    ```
+
+   a. Retrieve the current value for x, add two to it and put the sum back into x  
+   b. This would fail as it is a syntax error  
+   c. Exit the program  
+   d. Create a function called "x" and put the value 2 in the function
+
+   Answer: a.
+   
+
 
 ---
 
