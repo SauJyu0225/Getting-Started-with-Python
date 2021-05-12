@@ -675,11 +675,66 @@ You cannot use **reserved words** as variable names/identifiers.
    d. Create a function called "x" and put the value 2 in the function
 
    Answer: a.
-   
 
+6. Which of the following elements of a mathematical expression in Python is evaluated first?  
+   a. Addition +  
+   b. Substraction -  
+   c. Parentheses ()  
+   d. Multiplication *  
+
+   Answer: c.
+
+7. What is the value of the remainder operator?
+   ```python
+   42 % 10
+   ```
+   Hint - the "%" is the remainder operator  
+   a. 10  
+   b. 420  
+   c. 1042  
+   d. 2  
+
+   Answer: d.
+
+8. What will be the value of x after the following statement executes:  
+   ```python
+   x = 1 + 2 * 3 - 8 / 4
+   ```
+   a. 15  
+   b. 4  
+   c. 3.0  
+   d. 5.0  
+
+   Answer: d.
+
+9. What will be the value of x when the following statement is executed?  
+   ```python
+   x = int(98.6)
+   ```
+   a. 98  
+   b. 6  
+   c. 100  
+   d. 99  
+
+   Answer: a.
+
+10. What does the Python **input()** function do?  
+   a. Pause the program and read data from the user  
+   b. Connect to the networl and retrieve a web page  
+   c. Read the memory of the running program  
+   d. Take a screen shor from an area of the screen  
+
+   Answer: a.
+   
+### Assignment 2.2
+   Write a program that uses **input** to prompt a iser for their name and then welcomes them. Note that **inout** will pop up a dialog box. Enter **Sarah** in the pop-up bpx when you are prompted so your output will match the desired output.
+
+   ```python
+   name = input("Enter your name")
+   print("Hello " + name)
+   ```
 
 ---
-
 ### **_Week 5_**
 
 
