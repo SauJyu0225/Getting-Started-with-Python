@@ -651,8 +651,8 @@ You cannot use **reserved words** as variable names/identifiers.
    b. spam23  
    c. spam.23  
    d. spam_23  
-
-Answer: c.
+   
+   Answer: c.
 
 4. Which of the following is not a Python reserved word?  
 
