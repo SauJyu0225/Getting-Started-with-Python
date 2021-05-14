@@ -1046,7 +1046,7 @@ You cannot use **reserved words** as variable names/identifiers.
    (3) print('First', istr)
    (4) astr = '123'
    (5) istr = int(astr)
-   (6) print('Secind', istr)
+   (6) print('Second', istr)
    ```  
    a. 1  
    b. 5  
