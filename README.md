@@ -1466,6 +1466,118 @@ If the user enters a value out of range, print a suitable error message and exit
 
 ### **_Week 7_**
 
+#### **_5.1 Loops and Iteration_**
+
+1. Repeated steps  
+   Loops (repeated steps) have **iteration variable** that change each time through a loop. Often these **iteration variables** go through a sequence of numbers
+   ```python
+   n = 5
+   while n > 0:
+      print(n)
+      n = n - 1
+   print('Blastoff')
+   print(n)
+   ```
+   ```
+   Output:  
+   5
+   4
+   3
+   2
+   1
+   Blastoff
+   0
+   ```
+
+2. An infinite loop
+   ```python
+   n = 5
+   while n > o:
+      print('Lather')
+      print('Rense')
+      print('Dry off')
+   ```
+
+3. Breaking out of a loop
+   - The **break** statement ends the current loop and jumps to the statment immediately following the loop  
+   - It is like a llop test that can happen anywhere in the body of the loop
+
+   ```python
+   while True:
+      line = input('> ')
+      if line == 'done':
+         break
+      print(line)
+   print('Done!)
+   ```
+   ```
+   > hello there
+   hello there
+   > pig pig
+   pig pig
+   > done
+   Done!
+   ```
+
+4. Finishing and iteration with continue
+   The **continue** statement ends the current iteration and jumps to the top of the loop and starts the next iteration
+   ```python
+   while True:
+      line = input('> ')
+      if line[0] == '#':
+         continue
+      if line == 'done':
+         break
+      print(line)
+   print('Done!')
+   ```
+   ```
+   > hello there
+   hello there
+   > # don't print this
+   > print this!
+   print this
+   > done
+   Done!
+   ```
+
+#### **_5.2 Definite Loops_**
+
+1. Definite loops (for loops) have explicit **iteration variables** that change each time throygh a loop. These **iteration variables** move through the sequence or set.
+
+2. A simple definite loop
+   ```python
+   for i in [5, 4, 3. 2, 1]:
+      print(i)
+   print('Blastoff!')
+   ```
+
+3. A definite loop with strings
+   ```python
+   friends = ['Joseph', 'Glenn', 'Sally']
+   for friend in friends:
+      print('Happy New Year:', friend)
+   print('Done!')
+   ```
+ 
+ 4. Looking at in...
+    - The **iteration variable** "iterates" through the **sequence** (ordered set)  
+    - The **block (body)** of code is executed once for each value **in** the **sequence**  
+    - The **iteration variable** moves through all of the values  **in** the **sequence**
+    ```python
+    for i in [5, 4, 3, 2, 1]
+         print(i)
+      i: iteration variable
+      [5, 4, 3, 2, 1]: Five-element sequence
+   ```
+
+#### **_5.3 Finding the largest value_**
+
+1. 
+
+
+
+#### **_5.4 Loop Idioms_**
 
 ---
 ## For GitHub
