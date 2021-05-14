@@ -22,6 +22,7 @@ not been recorded
    (5) **Secondary Memory**: **Slower large permanent storage** - lasts untill deleted - disk drive/memory stick  
 
 #### **1.3 Python as a Language**
+
 1. Syntax Error: Python is lost.
 
 ---
@@ -187,7 +188,6 @@ You cannot use **reserved words** as variable names/identifiers.
    x = 15
    x = x + 5
    print (x)
-
    ```
     a. 20  
     b. 5  
@@ -623,7 +623,6 @@ You cannot use **reserved words** as variable names/identifiers.
    ```python
    print(98.6)
    ```
-
    What is "98.6"?  
 
    a. A conditional statement  
@@ -637,7 +636,6 @@ You cannot use **reserved words** as variable names/identifiers.
    ```python
    print("123" + "abc")
    ```
-
    a. This a syntax error becasue you cannot add strings  
    b. 123+abc  
    c. 123abc  
@@ -668,7 +666,6 @@ You cannot use **reserved words** as variable names/identifiers.
     ```python
     x = x + 2
     ```
-
    a. Retrieve the current value for x, add two to it and put the sum back into x  
    b. This would fail as it is a syntax error  
    c. Exit the program  
@@ -803,10 +800,667 @@ You cannot use **reserved words** as variable names/identifiers.
       print('Third 6')
    print('Afterwords 6')
    ```
+
+4. 
+   increase/maintain after **if** or **for**  
+   decrease to indicate **end of block**
+
+   ```python
+   x = 5
+   if x > 2:
+      print('Bigger than 2')
+      print('Still bigger')
+   print('Done with 2')
+
+   for i in range(5)
+      print(i)
+      if i > 2:
+         print('Bigger than 2')
+         print('Done with i', i)
+   print('All Done')
+   
+5. Nested decisions
+   ```python
+   x = 42
+   if x > 1:
+      print("More than one')
+      if x < 100:
+         print('Less than 100')
+   print('All done')
+
+6. Two-way decisions
+   - Sometimes we want to do one thing if a logical expression is true and something else if the expression is false  
+
+   - It is like a fork in the road - we mush choose **one or the other** path but not both
+
+   - With else:
+   ```python
+   x = 4
+   if x > 2:
+      print('Bigger')
+   else:
+      print('Smaller')
+   print('All done')
+   ```
+
+#### **3.2 Conditional Statement**
+##### **Part 2**
+
+1. Visualize Blocks
+   ```python
+   x = 4
+   if x > 2:
+      print:('Bigger')
+   else:
+      print('Smaller')
+   print('All done')
+   ```
+
+2. Multi-way
+   ```python
+   if x < 2:
+      print('Small')
+   elif x < 10:
+      print('Medium')
+   else:
+      print('LARGE')
+   print('All done')
+   ```
+
+3. The try/except structure
+   - You surround a dangerous section of code with **try** and **except**  
+   - If the code in the **try** works - the **except** is skipped  
+   - If the code in the **try** fails - it jumps to the **except** section 5 
+
+   (There will not be Traceback)
+
+   ```python
+   astr = 'Hello Bob'
+   try:
+      istr = int(astr)
+   except:
+      istr = -1
+   print('First', istr)
+   ```
+   When the first conversion fails - it just drops into the exept: clause and the program continues...  
+
+   ```
+   we get First -1
+   ```
+
+   ```python
+   astr = '123'
+   try:
+      istr = int(astr)
+   except:
+      istr = -1
+   print('Second', istr)
+   ```
+   When the second conversion succeeds - it just skips the except: clasuse and the program continues...
+
+   ```
+   we get Second 123
+   ```
+
+4. Try/Except
+   ```python
+   astr = 'Bob'
+   try:
+      print('Hello')
+      istr = int(astr)
+      print('There')
+   except:
+      istr = -1
+   print('Done', istr)
+   ```
+   ```
+   we get: 
+   Hello  
+   Done, -1
+   ```
+
+   ```python
+   rawstr = input('Enter a number:')
+   try:
+      ival = int(rawstr)
+   except:
+      ival = -1
+   
+   if ival > 0:
+      print('Nice work')
+   else:
+      print('Not a number')
+   ```
+
+### **_Quiz: Chapter 3_**
+
+1. What do we do to a Python statement that is immediately after an **if** statement to indicate that the statement is to be excuted only when the **if** statement is **true**?  
+
+   a. Start the statement with a "#" character  
+   b. Indent the line below the if statement  
+   c. Begin the statement with a curly brace {  
+   d. Underline all of the conditional code  
+
+   Answer: b.  
+
+2. Which of these operators is **not** a comparison/logical operator?  
+   a. ==  
+   b. !=  
+   c. >=  
+   d. =  
+   e. <=  
+
+   Answer: d.  
+
+3. What is true about the following code segment:  
+   ```python
+   if x == 5:
+      print('Is 5')
+      print('Is Still 5')
+      print('Third 5')
+   ```
+   a. Depending on the value of **x**, either all three of the print statement will execute or none of the statement will execute  
+   b. The string 'is 5' will always print out regardless of the value for **x**  
+   c. The string 'is 5' will never print out regardless of the value for **x**  
+   d.  Only two of the three print statements will print out if the value of **x** is less than zaro  
+
+   Answer: a.  
+
+4. When you have multiple lines in an **if** block, how do you indicate the end of the **if** blcok?  
+   a. You omit the semicolon; on the last line of the if block  
+   b. You de-indent the next line past the if block to the same level of indent as the origincal **if** statement  
+   c. You use a curly brace { after the last line of the if block  
+   d. You put the colon : character on a line by itself to indicate we are done with the if block  
+   
+   Answer: b.  
+
+5. You look at the following text:  
+   ```python
+   if x == 6:
+      print('Is 6')
+      print('Is Still 6')
+      print('Third 6')
+   ```
+   It looks perfect but Python is giving you an 'Indentation Error' on the second print statemnt. What is the most likely reason?  
+
+   a. Python has reached its limit on the largest Python program that can be run  
+   b. You have mixed tabs and spaces in the file  
+   c. Python thinks 'Still' is a mis-spelled word in the string  
+   d. In order to make humans feel inadequate, Python randomly emits 'Indentation Error' on perfectly good code - after about an hour the error will just go away without any changes to your proagram  
+
+   Answer: b.
+
+6. What is the Python reserved word that we use in two-way if tests to indicate the block of code that is to be executed if the logical test is false?  
+   a. iterate  
+   b. otherwise  
+   c. toggle  
+   d. else  
+
+   Answer: d.  
+
+7. What will the following code print out?
+   ```python
+   x = 0
+   if x < 2:
+      print('Small')
+   elif x < 10:
+      print('Medium')
+   else:
+      print('LARGE')
+   print('All done')
+   ```  
+   a. Small  
+      Medium  
+      LARGE  
+      All done  
+   b. LARGE  
+      All done  
+   c. All done  
+   d. Small  
+      All done  
+
+   Answer: d.  
+
+8. For the following code:   
+   ```python
+   if x > 2:
+      print('Below 2')
+   elif x >= 2:
+      print('Two or more')
+   else:
+      print('Something else')
+   ```  
+   What value of 'x' will cause 'Something else' print out?  
+
+   a. x = 2.0  
+   b. x = -22  
+   c. This code will never print 'Something else' regardless of the value for 'x'  
+   d. x = -2.0  
+
+   Answer: c.  
+
+9. In the following code(numbers added) - which will be the last line to excute successfully?  
+   ```python
+   (1) astr = 'Hello Bob'
+   (2) istr = int(astr)
+   (3) print('First', istr)
+   (4) astr = '123'
+   (5) istr = int(astr)
+   (6) print('Secind', istr)
+   ```  
+   a. 1  
+   b. 5  
+   c. 2  
+   d. 6  
+
+   Answer: a.  
+
+10. For the following code:  
+   ```python
+   astr = 'Hello Bob'
+   istr = 0
+   try:
+      istr = int(astr)
+   except:
+      istr = -1
+   ```  
+   What will the value be for **istr after this code executes**?  
+
+   a. It will be a random number depending on the operating system the program runs on  
+   b. -1  
+   c. It will be the 'Not a number ' value(i.e. NaN)  
+   d. false  
+
+   Answer: b.  
+
+#### **_Assignment 3.1_**
+
+1. Write a program to prompt the user for hours and rate per hour using input to compute gross pay. Pay the hourly rate for the hours up to 40 and 1.5 times the hourly rate for all hours worked above 40 hours. Use 45 hours and a rate of 10.50 per hour to test the program (the pay should be 498.75). You should use **input** to read a string and **float()** to convert the string to a number. Do not worry about error checking the user input - assume the user types numbers properly.
+
+   ```python
+   hrs = input('Enter Hours:')
+   rate = input('Enter the Rate:')
+   h = float(hrs)
+   r = float(rate)
+   if h <= 40:
+      print(h * r)
+   elif h > 40:
+      print(40 * r + (h - 40) * 1.5 * r)
+   ```
+#### **_Assignment 3.2_**
+1. Write a program to prompt the user for hours and rate per hour using input to compute gross pay. Pay the hourly rate for the hours up to 40 and 1.5 times the hourly rate for all hours worked above 40 hours. Use 45 hours and a rate of 10.50 per hour to test the program (the pay should be 498.75). You should use **input** to read a string and **float()** to convert the string to a number. Do not worry about error checking the user input - assume the user types numbers properly.
+
+   ```python
+   hrs = input('Enter Hours:')
+   rate = input('Enter the Rate:')
+   h = float(hrs)
+   r = float(rate)
+   if h <= 40:
+      pay = h * r)
+   elif h > 40:
+      pay = 40 * r + (h - 40) * 1.5 * r)
+   print('Pay', pay)
+   ```
+
+#### **_Assignment 3.3_**
+1. 3.3 Write a program to prompt for a score between 0.0 and 1.0. If the score is out of range, print an error. If the score is between 0.0 and 1.0, print a grade using the following table:
+Score Grade
+>= 0.9 A
+>= 0.8 B
+>= 0.7 C
+>= 0.6 D
+< 0.6 F
+If the user enters a value out of range, print a suitable error message and exit. For the test, enter a score of 0.85.
+   
+   ```python
+   score = input('Enter the score:')
+   s = float(score)
+   g = 'Grade'
+   if s >= 0.9:
+      g = 'A'
+   elif s >= 0.8:
+      g = 'B'
+   elif s >=0.7:
+      g = 'C'
+   elif s >=0.6:
+      g = 'D'
+   elif s < 0.6:
+      g = 'F'
+   else:
+      g = 'Error: Out of Range'
+   print('Grade:', g)
+   ```
+
 ---
 
 ### **_Week 6_**
 
+#### **_4.1 Using functions_**
+
+1. Stored (and reused) Steps
+   ```python
+   def thing():
+      print('Hello')
+      print('Fun')
+
+   thing() 
+   print('Zip')
+   thing()  
+   ```
+   ```
+   Output:  
+   Hello  
+   Fun  
+   Zip  
+   Hello  
+   Fun
+   ```
+
+2. Max function
+   A **function** is **some stored code** that we use. A function takes some **input** and produces an **output**.
+   ```python
+   big = max('Hello world')
+   print(big)
+   w
+   tiny = min('Hello world')
+   print(tiny)
+   ```
+
+   ```python
+   'Hello world' (a string)  
+   ->
+   def max(inp):
+      blah
+      blah
+      for x in inp:
+         blah
+         blah
+   ->  
+   'w' (a string)
+   ```
+
+#### **_4.2 Buliding functions_**
+
+1. Building our own functions  
+   - We create a new function using the **def** keyword followed by optional parameters in parentheses
+   - We indent the body of the function  
+   - This **defines** the function but **does not** execute the body of the function
+
+   ```python
+   x = 5
+   print('Hello')
+
+   def print_lyrics():
+      print("I'm a lumberjack, and I'm a okay.")
+      print("I sleep all night and I work all day.")
+   
+   print('Yo')
+   print_lyrics()
+   x = x + 2
+   print(x)
+   ```
+
+   ```
+   Output:
+   Hello  
+   Yo  
+   I'm a lumberjack, and I'm okay.  
+   I sleep all night and I worl all day.  
+   7
+   ```
+
+2. Arguments  
+   - An **argument** is a value we pass into the **function** as its **input** when we call the function
+   - We use **arguments** so we can direct the **function** to do different kinds of work when we call it at **different** times
+   - We put the **arguments** in parentheses after the **name** of the function
+
+   ```python
+   big = max('Hello world')
+   'Hello world' is the argument
+   ```
+
+3. Parameters
+   A **parameter** is a variable which we use **in** the function **definition**. It is a "handle" that allows the code in the function to access the **arguments** for a particular function invocation.
+
+   ```python
+   def greet(lang):
+      if lang == 'es':
+         print('Hola')
+      elif lang == 'fr':
+         print('Bonjour')
+      else:
+         print('Hello')
+   
+   greet('en')
+   -> Hello
+   greet('es')
+   -> Hola
+   greet('fr')
+   -> Bonjour
+   ```
+
+4. Return values
+   Often a function will take its arguments, do some computation, and **return** a value to be used as the value of the function call in the **calling expression**. The **return** keyword is used for this.
+
+   ```python
+   def greet():
+      return "Hello"
+   
+   (return: 
+   1. 'it stops the function'
+   2. 'it also determines the residual value')
+
+   print(greet(), "Glenn")
+   print(greet(), "Sally")
+   ```
+
+   ```
+   Output:
+   Hello Glenn
+   Hello Sally
+   ```
+
+   - A "fruit" **function** is one that produces a **resuit**(or **return value**) 
+   - The **return** statement ends the **function** execution and "send back" the **result** of the **function**
+
+   ```python
+   def greet(lang):
+      if lang == 'es':
+         return 'Hola'
+      elif lang == 'fr':
+         return 'Bonjour'
+      else:
+         return 'Hello'
+   
+   print(greet('en'), 'Glenn')
+   -> Hello Glenn
+   print(greet('es'), 'Sally')
+   -> Hola Sally
+   print(greet('fr'), 'Michael')
+   -> Bonjour Michael
+   ```
+
+5. Multiple Parameters/Arguments
+   - We can define more than one **parameter** in the **function definition**
+   - We simply add more **arguments** when we call the **function**
+   - We match the number and order of arguments and parameters
+
+   ```python
+   def addtwo(a, b):
+      added = a + b
+      return added
+   
+   x = addtwo(3, 5)
+   print(x)
+   
+   -> 8
+   ```
+
+### **_Quiz: Chapter 4_**
+
+1. Which Python keyword indicates the start of a function definition?  
+   a. sweet  
+   b. continue  
+   c. def  
+   d. return  
+
+   Answer: c.
+
+2. In Python, how do you indicate the end of the block of code that makes up the function?  
+   a. You add a line that has at least 10 dashes  
+   b. You add the matching curly brace that was used to start the function {  
+   c. You de-indent a line of code to the same indent level as the **def** keyword  
+   d. You put the colon character (:) in the first colunmn of a line  
+
+   Answer: c.  
+
+3. In Python, what is the **input()** feature best described as?  
+   a. A user-defined function  
+   b. A built-in funciton  
+   c. A reserved word  
+   d. A data strcutre that can hold multiple values using string as keys  
+
+   Answer: b.  
+
+4. What does the following code print out?  
+   ```python
+   def thing():
+      print('Hello')
+
+   print('There')
+   ```
+   a. thing  
+   b.  
+   def  
+   thing  
+   c. There  
+   d.  
+   thing  
+   Hello  
+   There  
+
+   Answer: c.  
+
+5. In the following Python code, whihc of the following is an "argument" to a function?
+
+   ```python
+   x = 'banana'
+   y = max(x)
+   z = y * 2
+   ```
+   a. x  
+   b. max  
+   c. 'banana'  
+   d. y
+
+   Answer: a.  
+
+6. What will the following Python code print out?  
+   ```python
+   def func(x):
+      print(x)
+
+   func(10)
+   func(20)
+   ```
+   a.  
+   def  
+   x  
+   func  
+   func  
+   b.  
+   x  
+   x  
+   c.  
+   10  
+   20  
+   d.  
+   x  
+   20  
+
+   Answer: c.  
+
+7. Which line of the following Python program will never excute?  
+   ```python
+   def stuff():
+      print('Hello')
+      return
+      print('World')
+   
+   stuff()
+   ```
+   a. print('World')  
+   b. stuff()  
+   c. print('Hello')  
+   d. return  
+   e. def stuff():
+
+   Answer: a.
+
+8. What will the following Python program print out?  
+   ```python
+   def greet(lang):
+      if lang == 'es':
+         return 'Hola'
+      elif lang == 'fr':
+         retun 'Bonjour'
+      else:
+         return 'Hello'
+   
+   print(greet('fr),'Michael')
+   ```
+   a. Bonjour Michael  
+   b. def Michael  
+   c. Hello Michael  
+   d.  
+   Hola  
+   Bonjour  
+   Hello  
+
+   Answer: a.
+
+9. What does the following Python code print out? (Note that this is a bit of a trick question and the code has what many would condsider to be a flaw/bug - so read carefully).
+   ```python
+   def addtwo(a, b):
+      added = a + b
+      return a
+   x = addtwo(2,7)
+   print(x)
+   ```
+   a. 14  
+   b. 7  
+   c. 2  
+   d. addtwo
+
+   Answer: c.
+
+10. What is the most important benefit of writing your own functions?
+   a. Following the rule that whenever a program is more than 10 lines you must use a function  
+   b. Avoiding writing the same non-trivial code more than once in your program  
+   c. To avoid having more than 10 lines of sequential code without an indent or de-indent  
+   d. Following the rule that no function can have more than 10 statements in it
+
+   Answer: b.
+
+#### **_Assignment 4.6_**
+
+1. Write a program to prompt the user for hours and rate per hour using input to compute gross pay. Pay should be the normal rate for hours up to 40 and time-and-a-half for the hourly rate for all hours worked above 40 hours. Put the logic to do the computation of pay in a function called computepay() and use the function to do the computation. The function should return a value. Use 45 hours and a rate of 10.50 per hour to test the program (the pay should be 498.75). You should use **input** to read a string and **float()** to convert the string to a number. Do not worry about error checking the user input unless you want to - you can assume the user types numbers properly. Do not name your variable sum or use the sum() function.
+
+   ```python
+   hrs = input('Enter the Hour:')
+   rate = input('Enter the Rate:')
+   h = float(hrs)
+   r = float(rate)
+
+   def computepay(h, r):
+      if h <= 40:
+         pay = h * r
+      if h > 40:
+         pay = 40 * r + (h - 40) * 1.5 * r
+      return pay
+   p = computepay(h,r)
+   print('Pay', p)
+   ```
 
 ---
 
