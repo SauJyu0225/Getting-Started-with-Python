@@ -746,7 +746,63 @@ You cannot use **reserved words** as variable names/identifiers.
 ---
 ### **_Week 5_**
 
+#### **3.1 Conditional Statement**
+##### **Part 1**
 
+1. Conditional Steps
+   ```python
+   x = 5
+   if x < 10:
+      print('Smaller')
+   if x > 20:
+      print('Bigger')
+   print('Finis')
+   ```
+ 
+2. Comparison Operators
+   - **Boolean experssions** ask a question and produce a Yes or No result which we use to control program flow  
+   - **Boolean expressions** using **comparison operators** evaluate to True/False or Yes/No  
+   - Comparison operators look at variables but do not change the variables
+
+   |  Python   |      Meaning      |
+   | --------- |:-----------------:|
+   | <         |      Less than    |
+   | <=        |Less than or Equal to|
+   | ==        |     Equal to      |
+   | >=        |Greter than or Equal to|
+   | >         |    Greater than   |
+   | !=        |      Not equal    |
+
+   ```python
+   x = 5
+   if x ==5:
+      print('Equal 5')
+   if x > 4:
+      print('Greater than or Equals 5')
+   if x < 6:
+      print('Less thaan 6')
+   if x <= 5:
+      print('Less than or Equals 5')
+   if x != 6:
+      print('Not equal 6')
+   ```
+
+3. One-way decisions
+   ```python
+   x = 5 
+   print('Before 5')
+   if x == 5:
+      print('is 5)
+      print('is still 5
+      print('Third 5')
+   print('Afterwards 5')
+   print('Brfore 5')
+   if x == 6:
+      print('Is 6')
+      print('Is still 6')
+      print('Third 6')
+   print('Afterwords 6')
+   ```
 ---
 
 ### **_Week 6_**
