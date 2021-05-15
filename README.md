@@ -1564,24 +1564,401 @@ If the user enters a value out of range, print a suitable error message and exit
     - The **iteration variable** "iterates" through the **sequence** (ordered set)  
     - The **block (body)** of code is executed once for each value **in** the **sequence**  
     - The **iteration variable** moves through all of the values  **in** the **sequence**
+
     ```python
     for i in [5, 4, 3, 2, 1]
          print(i)
       i: iteration variable
       [5, 4, 3, 2, 1]: Five-element sequence
-   ```
+      ```
 
 #### **_5.3 Finding the largest value_**
 
-1. 
+1. Making "smart" loops
+   The trick is "knowing" something about the whole loop when you are stuck writing code that only sees one entry at a time
 
+   ```
+   Set some variables to initial values
+   ```
 
+   for **thing** in data:
+
+   ```
+   Look for something or do something to each entry separately, updating a variable
+   ```
+
+   ```
+   look at the variables
+   ```
+
+2. Looping through a set
+   ```python
+   print('Before')
+   for thing in [3, 41, 12, 3, 74, 15]:
+      print(thing)
+   print('After')
+   ```
+   ```
+   Output:
+   Before  
+   9  
+   41  
+   12  
+   3  
+   74  
+   15  
+   After
+   ```
+
+3. What is the largest number?
+   ```python
+   largest_so_far = -1
+   print('Before', largest_so_far)
+   for the_num in [9, 41, 12, 3, 74, 15]:
+      if the_num > largest_so_far:
+         largest_so_far = the_num
+      print('largest_so_far', the_num)
+   print('After', largest_so_far)
+   ```
+   ```
+   Output:
+   Before -1  
+   9 9  
+   41 41  
+   41 12  
+   41 3  
+   74 74  
+   74 15  
+   After 74
+   ```
+   We make a variable that contains the largest value we have seen so far. if the current **number we are looking at** is larger, it is the new **largest value we have seen so far**.
 
 #### **_5.4 Loop Idioms_**
 
+1. Counting in a loop
+
+   ```python
+   zork = 0
+   print('Before', zork)
+   for thing in [9, 41, 12, 3, 74, 15]:
+      zork = zork + 1
+      print(zork, thing)
+   print('After', zork)
+   ```
+   ```
+   Output:
+   Before 0
+   1 9
+   2 41
+   3 12
+   4 3
+   5 74
+   6 15
+   After 6
+   ```
+   To **count** how many times we execute a loop, we introduce a **counter variable that starts at 0** and we add ***one to it each time through the loop**.
+
+2. Summing in a loop
+   ```python
+   zork = 0
+   print('Before', zork)
+   for thing in [9, 41, 12, 3, 74, 15]:
+      zork = zork + thing
+      print(zork, thing)
+   print('After', zork)
+   ```
+   ```
+   Output:
+   Before 0
+   9 9
+   50 41
+   62 12
+   65 3
+   139 74
+   154 15
+   After 154
+   ```
+   To **add up** a **value** we encounter in a loop, we introduce a **sum variable that starts at 0** and we add the **value** to the sum each time through the loop.
+
+3. Finding the average in a loop
+   ```python
+   count = 0
+   sum = 0
+   print('Before', count, sum)
+   for value in [9, 41, 12, 3, 74, 15]:
+      count = count + 1
+      sum = sum + value
+      print(count, sum, value)
+   print('After', count, sum, sum / count)
+   ```
+   ```
+   Output:
+   Before 0 0
+   1 9 9
+   2 50 41
+   3 62 12
+   4 65 3
+   5 139 74
+   6 154 15
+   After 6 154 25
+   ```
+   An **average** just combines the **counting** and **sum** patterns and **divides when the loop is done**.
+
+4. Filtering in a loop
+   ```python
+   print('Before')
+   for value in [9, 41, 12, 3, 74, 15]:
+      if value > 20:
+         print 'Large number',value
+   print('After')
+   ```
+   ```
+   Output:
+   Before
+   Large number 41
+   Large number 74
+   After
+   ```
+   We use an **if** statement in the **loop** to catch/filter the values we are looking for.
+
+5. Search using a boolean variable
+   ```python
+   found = False
+   print('Before', found)
+   for value in [9, 41, 12, 3, 74, 15]:
+      if value == 3:
+         found = True
+      print(found, value)
+   print('After', found)
+   ```
+   ```
+   Output:
+   Before False
+   False 9
+   False 41
+   False 12
+   True 3
+   True 74
+   True 15
+   After True
+   ```
+   If we just want to search and **know if a value was found**, we use a **variable** that starts at **False** and is set to **True** as soon as we **find** what we are looking for.
+
+6. How to find the smallest value
+   ```python
+   smallest = Nonr
+   print('Before')
+   for value in [9, 41, 12, 3, 74, 15]:
+      if smallest is None:
+         smallest = value
+      elif value < smallest:
+         smallest = value
+      print(smallest, value)
+   print('After', smallest)
+   ```
+   ```
+   Output:
+   Before
+   9 9
+   9 41
+   9 12
+   9 3
+   3 74
+   3 15
+   After 3
+   ```
+   We still have a variable that is the **smallest** so far. The first time through the loop **smallest** is **None**, so we take the first **value** to be the **smallest**.
+
+7. The "is" and "is not" operators
+   ```python
+   smallest = None
+   print('Before')
+   for value in [3, 41, 12, 9, 74, 15]:
+      if smallest is None:
+         smallest = value
+      elif value < smallest:
+         smallest = value
+      print smallest, value
+   print('After', smallest)
+   ```
+   - Python has an ***is* operator that can be used in logical expressions  
+   - Implies "**is the same as**"  
+   - Similar to, but stronger than **==**  
+   - **is not** also is a logical operator
+
+### **_Quiz: Chapter 5_**
+
+1. What is wrong with Python loop:
+   ```Python
+   n = 5
+   while n > 0:
+      print(n)
+   print('All done')
+   ```
+
+   a. This loop will run forever  
+   b. The **print('All done')** statement should be indented four spaces  
+   c. There should be no colon on the **while** statement  
+   d. **while** is not a Python reserved word  
+
+   Answer: a.
+
+2. What does the **break** statement do?
+   a. Exits the currently executing loop  
+   b. Jumps to the 'top' of the loop and starts the next iteration  
+   c. Exits the program  
+   d. Resets the iteration variable to its initial value
+
+   Answer: a.
+
+3. What does the **continue** statement do?  
+   a. Jumps to the "top" of the loop and starts the next iteration  
+   b. Exits the program  
+   c. Exits the currently executing loop  
+   d. Resets the iteration variable to its initial value  
+
+   Answer: a. 
+
+4. What does the following Python program print out?  
+   ```python
+   tot = 0  
+   for i in [5, 4, 3, 2, 1]:
+      tot = tot + 1
+   print(tot)
+   ```
+   a. 5  
+   b. 15  
+   c. 10  
+   d. 0
+
+   Answer: a.
+
+5. What is the **_iteration_** variable in the following Python code?
+   ```python
+   friends = ['Joseph', 'Glenn', 'Sally']
+   for friend in friends:
+      print('Happy New Year:', friend)
+   print('Done!')
+   ```
+   a. friend  
+   b. Sally  
+   c. Glenn  
+   d. Joseph
+
+   Answer: a. 
+
+6. What is a good description of the following bit of Python code?
+   ```python
+   zork = 0
+   for thing in [9, 41, 12, 3, 74, 15]:
+      zork = zork + thing
+   print('After', zork)
+   ```
+   a. Count all of the elements in a list  
+   b. Sum all the elements of a list  
+   c. Find the largest item in a list  
+   d. Find the smallest item in a list
+
+   Answer: b.
+
+7. What will the following code print out?
+   ```python
+   smallest_so_far = -1
+   for the_num in [9, 41, 12, 3, 74, 15]:
+      if the_num < smallest_so_far:
+         smallest_so_far = the_num
+   print(smallest_so_far)
+   ```
+   Hint: This is a trick question and most would say this code has a bug - so read carefully  
+
+   a. -1  
+   b. 74  
+   c. 42  
+   d. 3
+
+   Answer: a.
+
+8. What is a good statement to describe the **is** operator as used in the following if statement:
+   ```python
+   if smallest is None:
+      smallest = value
+   ```
+   a. matches both type and value  
+   b. The if statement is a syntax error  
+   c. Is true if the **smallest** variable has a value of -1  
+   d. Looks up 'None' in the **smallest** variable if it is a string
+   
+   Answer: a.
+
+9. Which reserved word indicates the start of an "indefinite" loop in Python?  
+   a. for  
+   b. def  
+   c. indef  
+   d. while  
+   e. break  
+
+   Answer: d.
+
+10. How many times will the body of the following loop be executed?  
+   ```python
+   n = 0
+   while n > 0:
+      print('Lather')
+      print('Rinse')
+   print('Dry off!')
+   ```
+   a. 0  
+   b. 1  
+   c. 5  
+   d. This is an infinite loop
+
+   Answer: a.
+
+#### **_Worked exercise 5.1_**
+
+   ```python
+   num = 0
+   tot = 0.0
+   while True:
+      sval = input('Enter a number:')
+      if sval == 'done':
+         break
+      try:
+         fval = float(sval)
+      except:
+         print('Invalid input')
+         continue
+      # print(fval)
+      num = num + 1
+      tot = tot + fval
+
+   # print('All Done!')
+   print(tot, num, tot / num)
+   ```
+
+#### **_Assignemnt 5.2_**
+
+1. Write a program that repeatedly prompts a user for integer numbers until the user enters 'done'. Once 'done' is entered, print out the largest and smallest of the numbers. If the user enters anything other than a valid number catch it with a try/except and put out an appropriate message and ignore the number. Enter 7, 2, bob, 10, and 4 and match the output below.
+   ```python
+   largest = None
+   smallest = None
+
+   while True:
+      try:
+         num = input('Enter a number')
+         if num == 'done':
+            break
+         num = int(num)
+         if largest is None or num > largest:
+            largest = num
+         if smallest is None or num < smallese:
+            smallest = num
+      except:
+         print('Invalid input')
+         continue
+   print('Maximum is', largest)
+   print('Minimum is', smallest)
+   ```
 ---
 ## For GitHub
 [语法](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
-
-
-
