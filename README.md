@@ -716,12 +716,12 @@ You cannot use **reserved words** as variable names/identifiers.
    Answer: a.
 
 10. What does the Python **input()** function do?  
-   a. Pause the program and read data from the user  
-   b. Connect to the networl and retrieve a web page  
-   c. Read the memory of the running program  
-   d. Take a screen shor from an area of the screen  
+    a. Pause the program and read data from the user  
+    b. Connect to the networl and retrieve a web page  
+    c. Read the memory of the running program  
+    d. Take a screen shor from an area of the screen  
 
-   Answer: a.
+    Answer: a.
    
 #### **_Assignment 2.2_**
    Write a program that uses **input** to prompt a iser for their name and then welcomes them. Note that **inout** will pop up a dialog box. Enter **Sarah** in the pop-up bpx when you are prompted so your output will match the desired output.
@@ -1056,22 +1056,22 @@ You cannot use **reserved words** as variable names/identifiers.
    Answer: a.  
 
 10. For the following code:  
-   ```python
-   astr = 'Hello Bob'
-   istr = 0
-   try:
-      istr = int(astr)
-   except:
-      istr = -1
-   ```  
-   What will the value be for **istr after this code executes**?  
+    ```python
+    astr = 'Hello Bob'
+    istr = 0
+    try:
+       istr = int(astr)
+    except:
+       istr = -1
+    ```  
+    What will the value be for **istr after this code executes**?  
+ 
+    a. It will be a random number depending on the operating system the program runs on  
+    b. -1  
+    c. It will be the 'Not a number ' value(i.e. NaN)  
+    d. false  
 
-   a. It will be a random number depending on the operating system the program runs on  
-   b. -1  
-   c. It will be the 'Not a number ' value(i.e. NaN)  
-   d. false  
-
-   Answer: b.  
+    Answer: b.  
 
 #### **_Assignment 3.1_**
 
@@ -1329,16 +1329,25 @@ If the user enters a value out of range, print a suitable error message and exit
 
    print('There')
    ```
-   a. thing  
+   a. 
+   ```
+   thing 
+   ``` 
    b.  
+   ```
    def  
    thing  
-   c. There  
+   ```
+   c. 
+   ```
+   There  
+   ```
    d.  
+   ```
    thing  
    Hello  
-   There  
-
+   There 
+   ```
    Answer: c.  
 
 5. In the following Python code, whihc of the following is an "argument" to a function?
@@ -1363,20 +1372,28 @@ If the user enters a value out of range, print a suitable error message and exit
    func(10)
    func(20)
    ```
-   a.  
+   a.
+   ```
    def  
    x  
    func  
-   func  
-   b.  
+   func 
+   ```
+   b.
+   ```
    x  
    x  
-   c.  
+   ```
+   c.
+   ```
    10  
    20  
-   d.  
+   ```
+   d.
+   ```
    x  
    20  
+   ```
 
    Answer: c.  
 
@@ -1435,12 +1452,12 @@ If the user enters a value out of range, print a suitable error message and exit
    Answer: c.
 
 10. What is the most important benefit of writing your own functions?
-   a. Following the rule that whenever a program is more than 10 lines you must use a function  
-   b. Avoiding writing the same non-trivial code more than once in your program  
-   c. To avoid having more than 10 lines of sequential code without an indent or de-indent  
-   d. Following the rule that no function can have more than 10 statements in it
+    a. Following the rule that whenever a program is more than 10 lines you must use a function  
+    b. Avoiding writing the same non-trivial code more than once in your program  
+    c. To avoid having more than 10 lines of sequential code without an indent or de-indent  
+    d. Following the rule that no function can have more than 10 statements in it
 
-   Answer: b.
+    Answer: b.
 
 #### **_Assignment 4.6_**
 
@@ -1900,19 +1917,19 @@ If the user enters a value out of range, print a suitable error message and exit
    Answer: d.
 
 10. How many times will the body of the following loop be executed?  
-   ```python
-   n = 0
-   while n > 0:
-      print('Lather')
-      print('Rinse')
-   print('Dry off!')
-   ```
-   a. 0  
-   b. 1  
-   c. 5  
-   d. This is an infinite loop
+    ```python
+    n = 0
+    while n > 0:
+       print('Lather')
+       print('Rinse')
+    print('Dry off!')
+    ```
+    a. 0  
+    b. 1  
+    c. 5  
+    d. This is an infinite loop
 
-   Answer: a.
+    Answer: a.
 
 #### **_Worked exercise 5.1_**
 
