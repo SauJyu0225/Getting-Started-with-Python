@@ -105,7 +105,7 @@ You cannot use **reserved words** as variable names/identifiers.
    (1) interactive Python is good for experiments and programs of 3-4 lines long.  
    (2) Most programs are much longer, so we type them into a file anf tell Python to run the commands in the file.  
    (3) In a sense, we are "giving Python a script".  
-   (4) As a convention, we ad **".py"** as the suffix on the end of these files to indicate they contain Python.  
+   (4) As a convention, we add **".py"** as the suffix on the end of these files to indicate they contain Python.  
 
 5. Interactive versus Script
 
@@ -136,7 +136,7 @@ You cannot use **reserved words** as variable names/identifiers.
        print('Smaller)
    if x > 20:
        print('Bigger') 
-   print('Finis')
+   print('Finish')
    ```
 
 9. Repeated Steps
@@ -351,7 +351,7 @@ You cannot use **reserved words** as variable names/identifiers.
    x = 3.9 * x * ( 1 - x )
    ```
 
-   A variable is a memory location used to store a value (0.6). The value stored in a variable can be updated by replacing the old value (o.6) with a new value (0.936)
+   A variable is a memory location used to store a value (0.6). The value stored in a variable can be updated by replacing the old value (0.6) with a new value (0.936)
 
    The right side is an expression. Once the expression is evaluated, the result is placed in (assigned to) the variable on the left side (i.e. x).
 
@@ -402,16 +402,16 @@ You cannot use **reserved words** as variable names/identifiers.
    x = 11
    ```
 
-   Remeber the rules top to down (Parenthesis; Power; Multiplication; Addition; Left to right)
+   Remeber the rules top to down (Parentheses; Power; Multiplication; Addition; Left to right)
 
    When writing code - use parenthses
 
-   When writing coed - keep mathematical expressions simple enought that they are easy to understand
+   When writing code - keep mathematical expressions simple enough that they are easy to understand
 
-   Break long series of mathematical perations up to make them more clear
+   Break long series of mathematical operations up to make them more clear
 
 
-4. What dose "Type" mean?
+4. What does "Type" mean?
 
    In a Python variables, literals, and constants have a **"type"**
 
@@ -724,7 +724,7 @@ You cannot use **reserved words** as variable names/identifiers.
     Answer: a.
    
 #### **_Assignment 2.2_**
-   Write a program that uses **input** to prompt a iser for their name and then welcomes them. Note that **inout** will pop up a dialog box. Enter **Sarah** in the pop-up bpx when you are prompted so your output will match the desired output.
+   Write a program that uses **input** to prompt users for their names and then welcome them. Note that **input** will pop up a dialog box. Enter **Sarah** in the pop-up box when you are prompted so your output will match the desired output.
 
    ```python
    name = input("Enter your name")
@@ -753,7 +753,7 @@ You cannot use **reserved words** as variable names/identifiers.
       print('Smaller')
    if x > 20:
       print('Bigger')
-   print('Finis')
+   print('Finish')
    ```
  
 2. Comparison Operators
@@ -1009,21 +1009,33 @@ You cannot use **reserved words** as variable names/identifiers.
       print('LARGE')
    print('All done')
    ```  
-   a. Small  
-      Medium  
-      LARGE  
-      All done  
-   b. LARGE  
-      All done  
-   c. All done  
-   d. Small  
-      All done  
+   a. 
+   ```
+   Small  
+   Medium  
+   LARGE  
+   All done 
+   ```
+   b. 
+   ```
+   LARGE  
+   All done  
+   ```
+   c. 
+   ```
+   All done  
+   ```
+   d. 
+   ```
+   Small  
+   All done  
+   ```
 
    Answer: d.  
 
 8. For the following code:   
    ```python
-   if x > 2:
+   if x < 2:
       print('Below 2')
    elif x >= 2:
       print('Two or more')
@@ -1219,7 +1231,7 @@ If the user enters a value out of range, print a suitable error message and exit
    'Hello world' is the argument
    ```
 
-3. Parameters
+3. Parameters  
    A **parameter** is a variable which we use **in** the function **definition**. It is a "handle" that allows the code in the function to access the **arguments** for a particular function invocation.
 
    ```python
@@ -1260,7 +1272,7 @@ If the user enters a value out of range, print a suitable error message and exit
    Hello Sally
    ```
 
-   - A "fruit" **function** is one that produces a **resuit**(or **return value**) 
+   - A "fruit" **function** is one that produces a **result**(or **return value**) 
    - The **return** statement ends the **function** execution and "send back" the **result** of the **function**
 
    ```python
@@ -1350,7 +1362,7 @@ If the user enters a value out of range, print a suitable error message and exit
    ```
    Answer: c.  
 
-5. In the following Python code, whihc of the following is an "argument" to a function?
+5. In the following Python code, which of the following is an "argument" to a function?
 
    ```python
    x = 'banana'
@@ -1451,7 +1463,7 @@ If the user enters a value out of range, print a suitable error message and exit
 
    Answer: c.
 
-10. What is the most important benefit of writing your own functions?
+10. What is the most important benefit of writing your own functions?  
     a. Following the rule that whenever a program is more than 10 lines you must use a function  
     b. Avoiding writing the same non-trivial code more than once in your program  
     c. To avoid having more than 10 lines of sequential code without an indent or de-indent  
@@ -1634,7 +1646,7 @@ If the user enters a value out of range, print a suitable error message and exit
    for the_num in [9, 41, 12, 3, 74, 15]:
       if the_num > largest_so_far:
          largest_so_far = the_num
-      print('largest_so_far', the_num)
+      print(largest_so_far, the_num)
    print('After', largest_so_far)
    ```
    ```
@@ -1763,7 +1775,7 @@ If the user enters a value out of range, print a suitable error message and exit
 
 6. How to find the smallest value
    ```python
-   smallest = Nonr
+   smallest = None
    print('Before')
    for value in [9, 41, 12, 3, 74, 15]:
       if smallest is None:
@@ -1798,7 +1810,7 @@ If the user enters a value out of range, print a suitable error message and exit
       print smallest, value
    print('After', smallest)
    ```
-   - Python has an ***is* operator that can be used in logical expressions  
+   - Python has an **is** operator that can be used in logical expressions  
    - Implies "**is the same as**"  
    - Similar to, but stronger than **==**  
    - **is not** also is a logical operator
@@ -1828,7 +1840,7 @@ If the user enters a value out of range, print a suitable error message and exit
 
    Answer: a.
 
-3. What does the **continue** statement do?  
+3. What does the **continue** statement do?   
    a. Jumps to the "top" of the loop and starts the next iteration  
    b. Exits the program  
    c. Exits the currently executing loop  
@@ -1968,7 +1980,7 @@ If the user enters a value out of range, print a suitable error message and exit
          num = int(num)
          if largest is None or num > largest:
             largest = num
-         if smallest is None or num < smallese:
+         if smallest is None or num < smallest:
             smallest = num
       except:
          print('Invalid input')
