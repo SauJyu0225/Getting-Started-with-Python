@@ -15,7 +15,7 @@ not been recorded
 
 2. Definitions  
 
-   (1) **Central Processing Unit (CPU)**: Runs the program - The CPU id always wondering "what to do next". Not the brains exactly - very dumb but very very fast.  
+   (1) **Central Processing Unit (CPU)**: Runs the program - The CPU is always wondering "what to do next". Not the brains exactly - very dumb but very very fast.  
    (2) **Input Devices**: Keyboard, Mouse, Touch Screen  
    (3) **Output Devices**: Screen, Speakers, Printer, DVD Burner  
    (4) **Main Memory**: **Fast small temporary storage** - lost on reboot - aka RAM  
