@@ -66,7 +66,7 @@ not been recorded
 
    (1) Vocabulary/Words: Variables and Reserved words  
    (2) Sentence structure: valid syntax patterns  
-   (3) Story structure: constructing a prigram for a purpose  
+   (3) Story structure: constructing a program for a purpose  
 
 2. Reserved words  
 You cannot use **reserved words** as variable names/identifiers.
@@ -173,7 +173,7 @@ You cannot use **reserved words** as variable names/identifiers.
 ---
 ### **_Quiz: Chapter 1_** 
 
-1. When Python is running in the interactive mode and displaying the chervron prompt(>>>) - what question is Python asking you?  
+1. When Python is running in the interactive mode and displaying the chevron prompt(>>>) - what question is Python asking you?  
 
    a. What Python statement would you like me to run?  
    b. What is the next machine language instruction to me?  
