@@ -44,7 +44,7 @@ not been recorded
    Open **Visual Studio Code**.  
    Create and save a new file on your **desktop**.  
    Also, create a folder on your desktop named **_py4e_**.  
-   I svae the file as **_HelloWorld.py_**.  
+   I save the file as **_HelloWorld.py_**.  
 
    **Step 3:** Write the code in Visual Studio Code:
    ```python
